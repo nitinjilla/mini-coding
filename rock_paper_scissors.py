@@ -1,26 +1,29 @@
-import random
-import operator
+# If rock, paper and scissor are kept in the spoken order, then it can be seen that the one with higher index wins. However, that is 
+# not the case for rock-scissors pair. Two 'if' statements are used to solve this anomaly. 
+# The player with the highest score at the end of best of five game is the winner.
+
+import random, operator
 
 def RockPaperScissors(human_name, human_choice):
-        computer_options = ['rock', 'paper', 'scissors']
-        computer_choice = random.choice(computer_options)
+        options = ['rock', 'paper', 'scissors']
+        computer_choice = random.choice(options)
         print(computer_choice)
-        if human_choice in computer_options:
-                if computer_options.index(human_choice) == computer_options.index(computer_choice):
+        if human_choice in options:
+                if options.index(human_choice) == options.index(computer_choice):
                         print(f'Game {counter}: Tie!\n')
                         return 0
 
-                if (computer_options.index(human_choice) == 2) and (computer_options.index(computer_choice) == 0):
+                if (options.index(human_choice) == 2) and (options.index(computer_choice) == 0):
                         players['Computer'] += 1
                         print(f'Game {counter}: Computer won.\n')
                         return 0
 
-                if (computer_options.index(human_choice) == 0) and (computer_options.index(computer_choice) == 2):
+                if (options.index(human_choice) == 0) and (options.index(computer_choice) == 2):
                         players[human_name] += 1
                         print(f'Game {counter}: {human_name} won.\n')
                         return 0
                 
-                if (computer_options.index(human_choice) > computer_options.index(computer_choice)):
+                if (options.index(human_choice) > options.index(computer_choice)):
                         players[human_name] += 1
                         print(f'Game {counter}: {human_name} won.\n')
                 else:
@@ -39,7 +42,6 @@ while counter <= 5:
         counter += 1
 
 winner = max(players.items(), key =  operator.itemgetter(1))[0]
-loser = min(players.items(), key =  operator.itemgetter(1))[0]
 
 if players[human_name] == players['Computer']:
         print("It's a draw! \n\n{} {} - {} Computer".format(human_name, players[human_name], players['Computer']))
