@@ -4,7 +4,7 @@
 
 import random, operator
 
-def RockPaperScissors(human_name, human_choice):
+def RockPaperScissors(human_choice):
         options = ['rock', 'paper', 'scissors']
         computer_choice = random.choice(options)
         print(computer_choice)
@@ -38,7 +38,7 @@ human_name = input('Enter your name \n')
 players = {human_name: 0, 'Computer': 0}
 while counter <= 5:
         human_choice = input('\nThrow a rock, paper or scissors \n').lower()
-        RockPaperScissors(human_name, human_choice)
+        RockPaperScissors(human_choice)
         counter += 1
 
 winner = max(players.items(), key =  operator.itemgetter(1))[0]
