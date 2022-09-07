@@ -1,2 +1,2 @@
 # mini-coding
-Contains codes to problems I feel like solving
+# just for fun and practising logic
