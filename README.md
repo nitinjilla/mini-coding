@@ -1,2 +1,2 @@
 # mini-coding
-# practising logic in Python
+# for practising logic in Python
