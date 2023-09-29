@@ -1,2 +1,2 @@
 # mini-coding
-# for practising logic in Python
+#programming in my free time :)
