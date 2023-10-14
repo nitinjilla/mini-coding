@@ -17,8 +17,8 @@ func main() {
     
 	for i := 0; i < (cap(fuck)); i++ {
 
-		var a byte       
-		_, err := fmt.Scan(&a)
+	var a byte       
+	_, err := fmt.Scan(&a)
         if err != nil{
             fmt.Println(err)
         }
