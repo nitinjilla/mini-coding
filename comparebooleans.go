@@ -8,6 +8,8 @@ import "fmt"
 
 func main(){
 
+	// fmt.Print(areBooleansEqual(true, false))
+
 	if areBooleansEqual(true, false) {
 		fmt.Print("The boolean values are equal!")
 	}else{
