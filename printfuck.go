@@ -9,19 +9,21 @@ import (
 
 func main() {
 
-	//fuck := []byte{70, 85, 67, 75, 33}
-  
-	fuck := make([]byte, 0, 5)
+	// fuck := []byte{70, 85, 67, 75}
 
-    fmt.Println("Guess the ASCII to print the word 'FUCK!' One character at a time.")
-    
+	fuck := make([]byte, 0, 4)
+
+	fmt.Println("Guess the ASCII to print the word 'FUCK'\nOne character at a time.")
+	fmt.Println("Hint: A = 65")
+
 	for i := 0; i < (cap(fuck)); i++ {
 
-	var a byte       
-	_, err := fmt.Scan(&a)
-        if err != nil{
-            fmt.Println(err)
-        }
+		var a byte
+		_, err := fmt.Scan(&a)
+		if err != nil {
+			fmt.Println(err)
+		}
+
 		fuck = append(fuck, a)
 	}
 
@@ -38,14 +40,14 @@ func main() {
 func printFUCK(m []byte) (fuck string, err error) {
 
 	var (
-		errEmptyString = errors.New("Empty string")
+		errEmptyString = errors.New("Empty string.")
 		errNotTheWord  = errors.New("Not the word.")
 	)
 
 	if string(m) == "" {
 		err = errEmptyString
-	} else if string(m) != "FUCK!" {
-        fmt.Println(string(m))
+	} else if string(m) != "FUCK" {
+		fmt.Println(string(m))
 		err = errNotTheWord
 	} else {
 		fuck = string(m)
