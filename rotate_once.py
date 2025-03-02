@@ -8,11 +8,11 @@ def rotate_once(input_list: list) -> list:
 
     return input_list
 
+
+""" 
 l = [1, 2, 3, 4, 5]
-print(rotate_once(l))
-print(rotate_once(l))
-print(rotate_once(l))
-print(rotate_once(l))
-
-
-
+print(rotate_once(l))  #[2, 3, 4, 5, 1]
+print(rotate_once(l))  #[3, 4, 5, 1, 2]
+print(rotate_once(l))  #[4, 5, 1, 2, 3]
+print(rotate_once(l))  #[5, 1, 2, 3, 4]
+"""
