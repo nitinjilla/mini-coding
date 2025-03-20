@@ -1,7 +1,7 @@
 use std::{env, fs};
 
 fn main() {
-    // ensure you have a file named version.txt with test 0.0.0 in it,
+    // ensure you have a file named version.txt with text 0.0.0 in it
 
     let args: Vec<String> = env::args().collect();
 
