@@ -48,7 +48,7 @@ fn increment_patch_version(patch: &mut u16) {
 }
 
 /*
-rustc bumpr.rs
+rustc bump.rs
 echo "0.0.0" > version.txt
 ./bump version
 0.0.0
